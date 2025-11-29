@@ -1,0 +1,4 @@
+node server.js buat backend diterminal dulu di vscode
+baru buka
+admin.html masukan token di env
+index.html

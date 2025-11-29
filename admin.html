@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin KartunLand - Riwayat Transaksi</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-container {
+            background: #fff;
+            margin: 40px auto;
+            padding: 20px 24px 28px;
+            border-radius: 15px;
+            max-width: 1000px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .admin-header h2 {
+            font-family: 'Fredoka One', cursive;
+            color: #ff6b6b;
+            margin: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        th, td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background: #f8f8f8;
+            font-weight: 600;
+        }
+        .badge-success {
+            background: #4CAF50;
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 999px;
+            font-size: 12px;
+        }
+        .small-input {
+            padding: 6px 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            min-width: 180px;
+        }
+        .btn-small {
+            padding: 7px 14px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 8px;
+            background: #ff6b6b;
+            color: #fff;
+        }
+        .btn-small:hover {
+            opacity: .9;
+        }
+        #adminMessage {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Tx hash + network badge */
+        .tx-cell {
+            white-space: nowrap;
+            font-family: monospace;
+            font-size: 13px;
+        }
+        .tx-hash-link {
+            text-decoration: none;
+        }
+        .tx-hash-link:hover {
+            text-decoration: underline;
+        }
+        .tx-badge {
+            display: inline-block;
+            margin-left: 6px;
+            padding: 2px 6px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .tx-badge-local {
+            background: #eee;
+            color: #555;
+        }
+        .tx-badge-sepolia {
+            background: #4b7bec;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>KartunLand Admin</h1>
+                <div class="logo-icon">🛠️</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container admin-container">
+        <div class="admin-header">
+            <h2>Riwayat Transaksi</h2>
+            <div>
+                <input type="password" id="adminToken" class="small-input" placeholder="Admin Token">
+                <button id="loadTransactions" class="btn-small">Muat Data</button>
+            </div>
+        </div>
+
+        <div id="adminMessage">Belum ada data. Klik "Muat Data".</div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Waktu</th>
+                    <th>Video</th>
+                    <th>Buyer</th>
+                    <th>Harga (ETH)</th>
+                    <th>Tx Hash</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="transactionsTableBody">
+                <tr>
+                    <td colspan="6">Belum ada data. Klik "Muat Data".</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

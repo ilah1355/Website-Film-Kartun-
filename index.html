@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KartunLand - Dunia Kartun Anak Seru!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>KartunLand</h1>
+                <div class="logo-icon">🎬</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Beranda</a></li>
+                    <li><a href="#kartun">Kartun</a></li>
+                </ul>
+            </nav>
+            <div class="wallet-section">
+                <button id="connectWallet" class="btn-wallet">Hubungkan MetaMask</button>
+                <div id="walletInfo" class="wallet-info" style="display: none;">
+                    <span id="walletAddress"></span>
+                    <span id="walletBalance"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Selamat Datang di Dunia Kartun!</h2>
+                <p>Tempat terbaik untuk menonton kartun favorit anak-anak dengan teknologi blockchain yang aman.</p>
+                <div class="hero-buttons">
+                    <a href="#kartun" class="btn-primary">Lihat Kartun</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-elements">
+                    <div class="element el1">🐰</div>
+                    <div class="element el2">🐻</div>
+                    <div class="element el3">🦊</div>
+                    <div class="element el4">🐯</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kartun Section -->
+    <section id="kartun" class="kartun-section">
+        <div class="container">
+            <h2>Koleksi Kartun Seru</h2>
+            <p class="section-subtitle">Pilih kartun favorit dan nikmati dengan pembayaran blockchain yang mudah!</p>
+            
+            <div class="kartun-grid" id="kartunGrid">
+                <!-- Kartun akan dimuat melalui JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Pay Section -->
+    <section class="how-to-pay">
+        <div class="container">
+            <h2>Cara Membeli dengan Blockchain</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Hubungkan MetaMask</h3>
+                    <p>Klik tombol "Hubungkan MetaMask" di atas dan izinkan akses</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Pilih Kartun</h3>
+                    <p>Pilih kartun yang ingin ditonton dan klik "Beli Sekarang"</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Konfirmasi Pembayaran</h3>
+                    <p>Konfirmasi transaksi di MetaMask dengan biaya 0.01 ETH</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Nikmati Kartun!</h3>
+                    <p>Setelah pembayaran berhasil, nikmati kartun favorit Anda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+    </div>
+    </div>
+    </div>
+    <div class="footer-bottom">
+    <p>&copy; 2023 KartunLand. Semua hak dilindungi.</p>
+    </div>
+    </div>
+    </footer>
+
+    <!-- Modal untuk Video Player -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalTitle">Judul Kartun</h3>
+            <div class="video-container">
+                <iframe id="videoPlayer" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="modal-info">
+                <p>Status: <span id="purchaseStatus">Belum dibeli</span></p>
+                <button id="buyVideo" class="btn-primary">Beli Sekarang (0.01 ETH)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading" style="display: none;">
+        <div class="spinner"></div>
+        <p>Memproses transaksi...</p>
+    </div>
+
+    <!-- Web3 dan Script -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
